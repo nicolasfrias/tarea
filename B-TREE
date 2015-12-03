@@ -1,0 +1,46 @@
+package BTREE
+import()
+
+type node struct{
+  value1, value2 int
+  left, right, mid *node
+  twovalue bool
+
+}
+type BTREE struct{
+  root *node
+}
+func New()*BTREE{
+  return New(BTREE)
+}
+func (b*BTREE)Insert(x int){
+  if b.root == nil{
+    b.root=&node{x,0,nil,nil,nil,false}
+  }
+  return b.root.insert(x)
+}
+func(n*node)insert(x int){
+
+
+}
+func(b*BTREE)Search(x int)bool{
+  if b.root ==nil{
+    return false
+  }
+  return b.root.search(x)
+}
+func(n*node)search(x int)bool{
+ if n.value1==x || n.value2==x{
+   return true
+ }
+ if x<n.value1  {
+ return n.left.buscar(x)
+ }
+ if x>n.value1 && x>n.value2 && twovalue{
+   return n.right.buscar(x)
+ }
+ if x>n.value1 && x<n.value2{
+   return n.mid.buscar(x)
+ }
+
+}
